@@ -1,1 +1,1 @@
-# pols603
+## POLS 603 (MLE/GLMs)
