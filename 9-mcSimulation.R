@@ -7,9 +7,7 @@
 # Preparation  -------------
 library(tidyverse); library(here); library(conflicted)
 library(glue)
-
-
-set.seed(20220406) # to allow the exact replication of the results.
+set.seed(20220406) 
 
 
 # DGP  -----------------
@@ -48,10 +46,7 @@ hist(par.est[,1], breaks=250)
 hist(par.est[,2], breaks=250)
 
 
-
 # MC experiment with plots and comments -------
-
-
 ped <- T # turn F to run 5000 simulations without plots and comments. 
 n_max <- 5 # if ped = T, n_max <- 5. otherwise, n_max <- reps
 
@@ -68,7 +63,7 @@ for (i in 1:n_max) {
   error <- rnorm(n, 0, 4) # the stochastic part N(0,1) error.
   Y <- b0 + b1*X + error  # the true DGP 
   
-  if(ped){cat("# See the plot ")}
+  if(ped){cat("# See the plot.")}
   
   if(ped){print(plot(X, Y, pch=19, xlim=c(-5,5),ylim=c(-20,20),main = glue::glue("Data for iteration: {i}")))}
   
@@ -97,8 +92,6 @@ for (i in 1:n_max) {
   
   # cat("completed in ", tm - Sys.time(), " seconds\n")
 }
-
-
 
 
 

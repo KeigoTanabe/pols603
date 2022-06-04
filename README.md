@@ -1,3 +1,3 @@
-## POLS 603 (MLE/GLMs. TAMU)
+## MLE / GLM (Tamu POLS 603)
 
-This repository contains R codes and other materials from recitations I taught for the class. 
+This is the second course in the quantitative research methods sequence in the Texas A&M political science department. The repository contains some materials from recitations sessions.  
